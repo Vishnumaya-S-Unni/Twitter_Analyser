@@ -28,6 +28,17 @@ class twitterapi(api):
         self.api = tweepy.API(self.auth) 
     def search_twitter(self, track):
         publictweets = api.search(track)
+    def sentimental_analyser(self,tweets)
+     for tweets in public_tweets:
+        print(tweet.text)
+        analysis= TextBlob(tweets.text)
+        print(analysis.sentiment)
+        if analysis.sentiment[0]>0:
+            print("POSITIVE")
+        elif analysis.sentiment[0]<0:
+            print("NEGATIVE")
+        else :
+            print("NEUTRAL")     
     
 if __name__ == "__main__":
     tweets = twitterapi()
